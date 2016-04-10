@@ -21,9 +21,20 @@
     </div>
     <div class="down-link">
       <a href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie">IE浏览器</a>
-      <a href="http://www.google.cn/chrome/browser/desktop/index.html">谷歌浏览器</a>
+      <a href="http://rj.baidu.com/soft/detail/14744.html">谷歌浏览器</a>
       <a href="https://download.mozilla.org/?product=firefox-stub&os=win&lang=zh-CN">火狐浏览器</a>
     </div>
   </div>
 </body>
+<script>
+  var isIE = function(ver){
+    var b = document.createElement('b')
+    b.innerHTML = '<!--[if IE ' + ver + ']><i></i><![endif]-->'
+    return b.getElementsByTagName('i').length === 1
+  }
+  if( isIE(6) || isIE(7) ) {
+  } else {
+    window.location.href = "/";
+  }
+</script>
 </html>
